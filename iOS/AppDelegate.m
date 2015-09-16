@@ -40,6 +40,7 @@
   CGRect bounds = ([UIScreen instancesRespondToSelector:@selector(nativeBounds)] ? [[UIScreen mainScreen] nativeBounds] : [[UIScreen mainScreen] bounds]);
   _window = [[UIWindow alloc] initWithFrame:bounds];
   _window.backgroundColor = [UIColor whiteColor];
+  _window.rootViewController = [[UIViewController alloc] init];
   [_window makeKeyAndVisible];
   
   NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
